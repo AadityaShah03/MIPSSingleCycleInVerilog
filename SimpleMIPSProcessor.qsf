@@ -1,0 +1,197 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 08:08:57  July 03, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		SimpleMIPSProcessor_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "01:53:41  JULY 03, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name TOP_LEVEL_ENTITY TopLevelEntity
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+
+# EDA Netlist Writer Assignments
+# ==============================
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+
+# Simulator Assignments
+# =====================
+set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+
+# Power Estimation Assignments
+# ============================
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+
+# start EDA_TOOL_SETTINGS(eda_simulation)
+# ---------------------------------------
+
+	# EDA Netlist Writer Assignments
+	# ==============================
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
+
+# end EDA_TOOL_SETTINGS(eda_simulation)
+# -------------------------------------
+
+# ---------------------
+# start ENTITY(MIPSAlu)
+
+	# start DESIGN_PARTITION(Top)
+	# ---------------------------
+
+		# Incremental Compilation Assignments
+		# ===================================
+
+	# end DESIGN_PARTITION(Top)
+	# -------------------------
+
+# end ENTITY(MIPSAlu)
+# -------------------
+
+# ------------------------------
+# start ENTITY(MIPSRegisterFile)
+
+# end ENTITY(MIPSRegisterFile)
+# ----------------------------
+
+# ---------------------------------
+# start ENTITY(SimpleMIPSProcessor)
+
+# end ENTITY(SimpleMIPSProcessor)
+# -------------------------------
+
+# -------------------------
+# start ENTITY(decoder3to8)
+
+# end ENTITY(decoder3to8)
+# -----------------------
+
+# ---------------------
+# start ENTITY(enardff)
+
+# end ENTITY(enardff)
+# -------------------
+
+# -----------------------
+# start ENTITY(fullAdder)
+
+# end ENTITY(fullAdder)
+# ---------------------
+
+# -------------------------
+# start ENTITY(nBit2to1Mux)
+
+# end ENTITY(nBit2to1Mux)
+# -----------------------
+
+# -------------------------
+# start ENTITY(nBit4to1Mux)
+
+# end ENTITY(nBit4to1Mux)
+# -----------------------
+
+# -------------------------
+# start ENTITY(nBit8to1Mux)
+
+# end ENTITY(nBit8to1Mux)
+# -----------------------
+
+# ------------------------
+# start ENTITY(nBitAddSub)
+
+# end ENTITY(nBitAddSub)
+# ----------------------
+
+# ----------------------
+# start ENTITY(nBitDReg)
+
+# end ENTITY(nBitDReg)
+# --------------------
+set_global_assignment -name BDF_FILE TopLevelEntity.bdf
+set_global_assignment -name VERILOG_FILE InstructionMemory.v
+set_global_assignment -name MIF_FILE DataMem.mif
+set_global_assignment -name MIF_FILE InstructionMem.mif
+set_global_assignment -name QIP_FILE InstructionMemory.qip
+set_global_assignment -name VERILOG_FILE enardff.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE enardffWaveform.vwf
+set_global_assignment -name VERILOG_FILE nBitDReg.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE nBitDRegWaveform.vwf
+set_global_assignment -name VERILOG_FILE nBit2to1Mux.v
+set_global_assignment -name VERILOG_FILE mux2to1.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE nBit2to1MuxWaveform.vwf
+set_global_assignment -name VERILOG_FILE mux4to1.v
+set_global_assignment -name VERILOG_FILE nBit4to1Mux.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE nBit4to1MuxWaveform.vwf
+set_global_assignment -name VERILOG_FILE mux8to1.v
+set_global_assignment -name VERILOG_FILE nBit8to1Mux.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE nBit8to1MuxWaveform.vwf
+set_global_assignment -name VERILOG_FILE decoder3to8.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE decoder3to8Waveform.vwf
+set_global_assignment -name VERILOG_FILE MIPSRegisterFile.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE MIPSRegisterFileWaveform.vwf
+set_global_assignment -name VERILOG_FILE fullAdder.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE fullAdderWaveform.vwf
+set_global_assignment -name VERILOG_FILE nBitAddSub.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE nBitAddSubWaveform.vwf
+set_global_assignment -name VERILOG_FILE MIPSAlu.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE MIPSAluWaveform.vwf
+set_global_assignment -name QIP_FILE DataMemory.qip
+set_global_assignment -name VERILOG_FILE controlunit.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE ControlUnitWaveform.vwf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE TopLevelWaveform.vwf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/aadit/Downloads/MIPSVerilog/TopLevelWaveform.vwf"
